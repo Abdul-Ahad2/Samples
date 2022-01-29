@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .background {
+        background-image: url('https://images.pexels.com/photos/6976001/pexels-photo-6976001.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+        position: fixed;
+        background-position-y: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 60%;
+    }
+    .form {
+        position: absolute;
+        top: 8%;
+        right: 4.8%;
+    }
+    .heading{
+        color: white;
+        margin: 10% 0 0 2%;
+    }
+    h1 {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bolder;
+        font-size: 12vh;
+        letter-spacing: -4px;
+        line-height: 13vh;
+    }
+    h2 {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: 1000;
+        font-size: 8vh;
+        color: rgb(194, 116, 0);
+        -webkit-text-stroke: rgb(194, 116, 0) 2px;
+    }
+    h6 {
+        color: rgb(90, 90, 90);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin-top: 8px;
+    }
+    #lastName {
+        margin-left: 20px;
+    }
+    #lastName, #FirstName, #feedback, #password, #email {
+        border: rgb(194, 116, 0) solid 2px;
+        border-radius: 4px;
+        padding: 5px 2vh 6px 2vh;
+    }
+    #feedback, #password, #email {
+        width: 63vh;
+    }
+    #lastName, #FirstName {
+        width: 30vh;
+    }
+
+    #lastName, #FirstName, #password, #email {
+        height: 6vh;
+    }
+    ::placeholder {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: rgba(131, 131, 131, 0.541);
+    }
+    #submit {
+        color: whitesmoke;
+        background-color: rgb(194, 116, 0);
+        margin: 1.5vh 0 0 1px;
+        padding: 1vh 26.5vh 1vh 26.5vh;
+        border: rgb(194, 116, 0) solid 1px;
+        border-radius: 1vh;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 3vh;
+    }
+</style>
+<body>
+    <div class="background">
+        <div class="heading">
+            <h1>Give</h1>
+            <h1>Us Your</h1>
+            <h1>Opinion.</h1>
+        </div>
+    </div>
+    <div class="form">
+        <h2>Feedback.</h2>
+        <form action="#">
+            <h6>Email</h6>
+            <div><input id="email" class="email" title="Email" type="email" placeholder="example@hotmail.com" required></div>
+            <h6>Password</h6>
+            <div><input title="Password" type="password" name="Password" id="password" placeholder="**********" required></div>
+            <h6>Username</h6>
+            <div><input title="Enter Your First Name" type="text" name="firstName" id="FirstName" required placeholder="First Name"><input type="text" name="Last Name" id="lastName" title="Enter your last name" required placeholder="Last Name"></div>
+            <h6>Feedback</h6>
+            <div><textarea title="Enter your feedback"  required name="Feedback" id="feedback" cols="51" rows="5" placeholder="Enter Your Feedback..."></textarea></div>
+            <div><input title="Sumbit Your Feedback" type="submit" value="SUBMIT" id="submit"></div>
+        </form>
+    </div>
+</body>
+</html>
