@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<style>
+
+    .main-container {
+        height: 75vh;
+        width: 100%;
+        background: rgb(0, 189, 214);
+        overflow: hidden;
+    }
+
+    img {
+        position: inherit;
+        opacity: 0.2;
+        height: 75vh;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .company {
+        color: white;
+        position: absolute;
+        top: 3%;
+        left: 3%;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: bolder;
+    }
+
+    .nav-home, .nav-doctors, .nav-dentists, .nav-appointments, .nav-blog {
+        color: rgb(255, 255, 255);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        text-decoration: none;
+        margin: 0px 3vh 0px 3vh;
+        font-size: 2.8vh;
+        font-weight: lighter;
+    }
+
+    nav {
+        background-color: rgb(0, 207, 235);
+        height: 12vh;
+        padding-top: 2.1%;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    h3 {
+        color: white;
+        position: absolute;
+        top: 2.4vh;
+        right: 7vh;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 3.2vh;
+        border: 1px rgb(0, 182, 206) solid;
+        padding: 1.5vh 5vh 1.5vh 5vh;
+        background-color: rgb(0, 182, 206);
+        border-radius: 1vh;
+    }
+
+    .para-1 {
+        margin-top: 10%;
+        color: white;
+        font-size: 8vh;
+    }
+
+    .para-3, .para-2 {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        padding: 0px 50px 0px 50px;
+    }
+
+    .para-2 {
+        color: white;
+        font-size: 3.2vh;
+        display: flex;
+        justify-content: center;
+        margin-top: 4%;
+        text-align: center;
+    }
+
+    .main-paras {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 10vh;
+    }
+
+    .link-appointments, .link-our-doctors {
+        text-decoration: none;
+        margin: 0vh 2vh 0vh 2vh;
+    }
+
+    .nav-links {
+        margin-top: 13vh;
+    }
+
+    .link-appointments {
+        border: white 2px solid;
+        background-color: white;
+        border-radius: 1.3vh;
+        color: rgb(0, 189, 214);
+        padding: 2vh 4vh 2vh 4vh;
+    }
+
+    .link-our-doctors {
+        border: white 2px solid;
+        border-radius: 1.3vh;
+        color: white;
+        padding: 2vh 4vh 2vh 4vh;
+    }
+
+    .section-1 {
+        background-color: rgb(236, 236, 236);
+        width: 100%;
+        height: 15vh;
+    }
+
+    .section-2 {
+        background-color: rgb(195, 234, 236);
+        height: 90vh;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+    }
+
+    .section-3 {
+        background-color: rgb(195, 234, 236);
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        margin-top: -49vh;
+    }
+
+    .box-1, .box-2, .box-3, .box-4, .box-5, .box-6 {
+        background-color: rgb(248, 245, 245);
+        height: 40vh;
+        width: 40vh;
+        margin: -8vh 3px 3px 3px;
+        text-align: center;
+        border-radius: 2vh;
+    }
+
+    p {
+        margin-top: 30px;
+        padding: 0px 20px 0px 20px;
+        color: grey;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    b {
+        font-size: 3vh;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: lighter;
+    }
+
+    svg {
+        width: 5vh;
+        height: 5vh;
+        margin: 4vh 0px 1vh 0px;
+        color: rgb(19, 177, 177);
+    }
+
+    .topic-bold {
+        font-weight: bold;
+    }
+
+    .lab-section {
+        display: flex;
+    }
+
+    .lab-pic {
+        background-image: url("https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?cs=srgb&dl=pexels-chokniti-khongchum-2280571.jpg&fm=jpg");
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+        height: 80vh;
+        width: 50%;
+        margin-top: 15vh;
+    }
+
+    .laboratory {
+        font-weight: 900;
+    }
+
+    .hedng {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 5vh;
+        color: rgb(5, 92, 104);
+        margin-bottom: 10%;
+    }
+
+    .lab-descp {
+        height: 80vh;
+        width: 50%;
+        background-color: white;
+        padding: 4% 20vh 10% 20vh;
+        margin-top: 15vh;
+    }
+
+
+
+    .lower-para {
+        margin-top: 15%;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 2.3vh;
+    }
+
+    .upper-para {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 2.3vh;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .bttn {
+        background-color: rgb(0, 189, 214);
+        padding: 10px 30px 10px 30px;
+        border: 2px solid rgb(0, 189, 214);
+        border-radius: 5vh;
+        margin: 7% 38vh 0px 0px;
+        font-size: 2.3vh;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bold;
+        height: fit-content;
+        width: fit-content;
+    }
+
+    .btttn {
+        color: white;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    footer {
+        width: 100%;
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+        padding: 6% 10% 0 10%;
+        background-color: rgb(195, 234, 236);
+    }
+
+    .first-line, .scond-line, .third-line, .fourth-line, .fifth-line {
+        margin-right: 3%;
+        font-size: 3vh;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        flex-direction: column;
+    }
+
+    .maali {
+        font-size: 4vh;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: bolder;
+        color: rgb(54, 162, 177);
+    }
+
+    .footer-links {
+        color: rgb(114, 184, 181);
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .scond-line {
+        margin-top: 3%;
+    }
+
+    .fourth-line {
+        margin-top: 3%;
+    }
+
+    .third-line {
+        margin-top: 3%;
+    }
+
+    .copyright {
+        background-color: black;
+        width: 100%;
+        height: 5vh;
+        color: white;
+        text-align: center;
+        font-size: 2vh;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        padding: 3px 0px 3px 0px;
+        font-weight: bold;
+    }
+
+    pre {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    
+</style>
+<body>
+    <header>
+        <div>
+            <div>
+                <nav>
+                    <ul>
+                        <li><a class="nav-home" title="Home" href="#">Home</a></li>
+                        <li><a class="nav-doctors" title="Our Doctors" href="#">Doctors</a></li>
+                        <li><a class="nav-dentists" title="Our Dentists" href="#">Dentists</a></li>
+                        <li><a class="nav-appointments" title="Book your Appointments" href="#">Appointments</a></li>
+                        <li><a class="nav-blog" title="About Us" href="#">Blog</a></li>
+                    </ul>
+                    <ul>
+                        <li><a title="#" href="#"><h3 class="nav-call-us" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: 400;">Call Now</h3></a></li>
+                    </ul>
+                    <div><h1 class="company">MaliHealth.</h1></div>
+                    <div class="main-paras">
+                        <div>
+                            <h1 class="para-1">Looking For An <span class="topic-bold">Experienced Doctor</span></h1>
+                        </div>
+                        <div>
+                            <div class="para-2">Doctor is an academic title that originates from the Latin word of the same spelling and meaning. The word is originally a noun of the verb docēre'teach'. It has been used as an academic title in Europe.</div>
+                        </div>
+                    </div>
+                    <div>
+                        <ul class="nav-links">
+                            <li><a title="Book your appointment" class="link-appointments" href="">Appointment</a></li>
+                            <li><a title="Our Experts" class="link-our-doctors" href="#">Our Doctors</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="main-container">
+                    <img src="https://images.pexels.com/photos/2324837/pexels-photo-2324837.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Five developers at work.">
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="section-1"></div>
+            <div class="section-2">
+                <div class="box-1">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eyedropper" viewBox="0 0 16 16">
+                            <path d="M13.354.646a1.207 1.207 0 0 0-1.708 0L8.5 3.793l-.646-.647a.5.5 0 1 0-.708.708L8.293 5l-7.147 7.146A.5.5 0 0 0 1 12.5v1.793l-.854.853a.5.5 0 1 0 .708.707L1.707 15H3.5a.5.5 0 0 0 .354-.146L11 7.707l1.146 1.147a.5.5 0 0 0 .708-.708l-.647-.646 3.147-3.146a1.207 1.207 0 0 0 0-1.708l-2-2zM2 12.707l7-7L10.293 7l-7 7H2v-1.293z" />
+                        </svg>
+                    </div><b>Gastroentrology</b><p>Medical information written for you, make informed desicions about your health concerns.</p>
+                </div>
+                <div class="box-2">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bandaid" viewBox="0 0 16 16">
+                            <path d="M14.121 1.879a3 3 0 0 0-4.242 0L8.733 3.026l4.261 4.26 1.127-1.165a3 3 0 0 0 0-4.242ZM12.293 8 8.027 3.734 3.738 8.031 8 12.293 12.293 8Zm-5.006 4.994L3.03 8.737 1.879 9.88a3 3 0 0 0 4.241 4.24l.006-.006 1.16-1.121ZM2.679 7.676l6.492-6.504a4 4 0 0 1 5.66 5.653l-1.477 1.529-5.006 5.006-1.523 1.472a4 4 0 0 1-5.653-5.66l.001-.002 1.505-1.492.001-.002Z" />
+                            <path d="M5.56 7.646a.5.5 0 1 1-.706.708.5.5 0 0 1 .707-.708Zm1.415-1.414a.5.5 0 1 1-.707.707.5.5 0 0 1 .707-.707ZM8.39 4.818a.5.5 0 1 1-.708.707.5.5 0 0 1 .707-.707Zm0 5.657a.5.5 0 1 1-.708.707.5.5 0 0 1 .707-.707ZM9.803 9.06a.5.5 0 1 1-.707.708.5.5 0 0 1 .707-.707Zm1.414-1.414a.5.5 0 1 1-.706.708.5.5 0 0 1 .707-.708ZM6.975 9.06a.5.5 0 1 1-.707.708.5.5 0 0 1 .707-.707ZM8.39 7.646a.5.5 0 1 1-.708.708.5.5 0 0 1 .707-.708Zm1.413-1.414a.5.5 0 1 1-.707.707.5.5 0 0 1 .707-.707Z" />
+                        </svg>
+                    </div><b>Cardiology</b><p>Medical information written for you, make informed desicions about your health concerns.</p>
+                </div>
+                <div class="box-3">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-activity" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z" />
+                        </svg>
+                    </div><b>Neurology</b><p>Medical information written for you, make informed desicions about your health concerns.</p>
+                </div>
+            </div>
+            <div class="section-3">
+                <div class="box-4">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </div><b>Heart Surgery</b><p>Medical information written for you, make informed desicions about your health concerns.</p>
+                </div>
+                <div class="box-5">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-thermometer-half" viewBox="0 0 16 16">
+                            <path d="M9.5 12.5a1.5 1.5 0 1 1-2-1.415V6.5a.5.5 0 0 1 1 0v4.585a1.5 1.5 0 0 1 1 1.415z" />
+                            <path d="M5.5 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0V2.5zM8 1a1.5 1.5 0 0 0-1.5 1.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0l-.166-.15V2.5A1.5 1.5 0 0 0 8 1z" />
+                        </svg>
+                    </div><b>Dentist</b><p>Medical information written for you, make informed desicions about your health concerns.</p>
+                </div>
+                <div class="box-6">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fingerprint" viewBox="0 0 16 16">
+                            <path d="M8.06 6.5a.5.5 0 0 1 .5.5v.776a11.5 11.5 0 0 1-.552 3.519l-1.331 4.14a.5.5 0 0 1-.952-.305l1.33-4.141a10.5 10.5 0 0 0 .504-3.213V7a.5.5 0 0 1 .5-.5Z" />
+                            <path d="M6.06 7a2 2 0 1 1 4 0 .5.5 0 1 1-1 0 1 1 0 1 0-2 0v.332c0 .409-.022.816-.066 1.221A.5.5 0 0 1 6 8.447c.04-.37.06-.742.06-1.115V7Zm3.509 1a.5.5 0 0 1 .487.513 11.5 11.5 0 0 1-.587 3.339l-1.266 3.8a.5.5 0 0 1-.949-.317l1.267-3.8a10.5 10.5 0 0 0 .535-3.048A.5.5 0 0 1 9.569 8Zm-3.356 2.115a.5.5 0 0 1 .33.626L5.24 14.939a.5.5 0 1 1-.955-.296l1.303-4.199a.5.5 0 0 1 .625-.329Z" />
+                            <path d="M4.759 5.833A3.501 3.501 0 0 1 11.559 7a.5.5 0 0 1-1 0 2.5 2.5 0 0 0-4.857-.833.5.5 0 1 1-.943-.334Zm.3 1.67a.5.5 0 0 1 .449.546 10.72 10.72 0 0 1-.4 2.031l-1.222 4.072a.5.5 0 1 1-.958-.287L4.15 9.793a9.72 9.72 0 0 0 .363-1.842.5.5 0 0 1 .546-.449Zm6 .647a.5.5 0 0 1 .5.5c0 1.28-.213 2.552-.632 3.762l-1.09 3.145a.5.5 0 0 1-.944-.327l1.089-3.145c.382-1.105.578-2.266.578-3.435a.5.5 0 0 1 .5-.5Z" />
+                            <path d="M3.902 4.222a4.996 4.996 0 0 1 5.202-2.113.5.5 0 0 1-.208.979 3.996 3.996 0 0 0-4.163 1.69.5.5 0 0 1-.831-.556Zm6.72-.955a.5.5 0 0 1 .705-.052A4.99 4.99 0 0 1 13.059 7v1.5a.5.5 0 1 1-1 0V7a3.99 3.99 0 0 0-1.386-3.028.5.5 0 0 1-.051-.705ZM3.68 5.842a.5.5 0 0 1 .422.568c-.029.192-.044.39-.044.59 0 .71-.1 1.417-.298 2.1l-1.14 3.923a.5.5 0 1 1-.96-.279L2.8 8.821A6.531 6.531 0 0 0 3.058 7c0-.25.019-.496.054-.736a.5.5 0 0 1 .568-.422Zm8.882 3.66a.5.5 0 0 1 .456.54c-.084 1-.298 1.986-.64 2.934l-.744 2.068a.5.5 0 0 1-.941-.338l.745-2.07a10.51 10.51 0 0 0 .584-2.678.5.5 0 0 1 .54-.456Z" />
+                            <path d="M4.81 1.37A6.5 6.5 0 0 1 14.56 7a.5.5 0 1 1-1 0 5.5 5.5 0 0 0-8.25-4.765.5.5 0 0 1-.5-.865Zm-.89 1.257a.5.5 0 0 1 .04.706A5.478 5.478 0 0 0 2.56 7a.5.5 0 0 1-1 0c0-1.664.626-3.184 1.655-4.333a.5.5 0 0 1 .706-.04ZM1.915 8.02a.5.5 0 0 1 .346.616l-.779 2.767a.5.5 0 1 1-.962-.27l.778-2.767a.5.5 0 0 1 .617-.346Zm12.15.481a.5.5 0 0 1 .49.51c-.03 1.499-.161 3.025-.727 4.533l-.07.187a.5.5 0 0 1-.936-.351l.07-.187c.506-1.35.634-2.74.663-4.202a.5.5 0 0 1 .51-.49Z" />
+                        </svg>
+                    </div><b>Medicine</b><p>Medical information written for you, make informed desicions about your health concerns.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="lab-section">
+            <div class="lab-pic"></div>
+            <div class="lab-descp">
+                <h2 class="hedng">Research <span class="laboratory">Laboratory</span></h2>
+                <p class="upper-para">Read doctor-produced health and medical information written for you to make informed decisions about your health concerns.</p>
+
+                <p class="lower-para">This study aims to analyze the correlation between clinical features taken from the history, physical examination, investigation of blood laboratory. Read doctor-produced health and medical information written for you to make informed decisions about your health concerns.</p>
+
+                <p class="bttn"><a href="#" class="btttn">Explore More</a></p>
+            </div>
+        </section>
+    </main>
+
+    <div class="horizontal-line"></div>
+
+    <footer>
+        <div class="first-line">
+            <h4 class="maali">MaliHealth.</h4>
+<pre>
+<a href="#" class="footer-links">About Us</a>
+<a href="#" class="footer-links">Annual Checkup</a>
+<a href="#" class="footer-links">Blog</a>
+<a href="#" class="footer-links">Careers</a>
+</pre>
+        </div>
+
+        <div class="scond-line">
+           
+<pre>
+<a href="#" class="footer-links">Get A Diagnosis</a>
+<a href="#" class="footer-links">How it works</a>
+<a href="#" class="footer-links">Privacy Policy</a>
+<a href="#" class="footer-links">Contact us</a>
+</pre>
+        </div>
+
+        <div class="third-line">
+<pre>
+<a href="#" class="footer-links">Aentna</a>
+<a href="#" class="footer-links">Health Plan</a>
+<a href="#" class="footer-links">Blue Shield</a>
+<a href="#" class="footer-links">Careers</a>
+</pre>
+        </div>
+
+        <div class="fourth-line">
+<pre>
+<a href="#" class="footer-links">Health Net</a>
+<a href="#" class="footer-links">Health Smart</a>
+<a href="#" class="footer-links">View More</a>
+<a href="#" class="footer-links">FAQ's</a>
+</pre>
+        </div>
+    </footer>
+
+    <section>
+        <div class="copyright">© 2022 MaliHealth (Pvt) Ltd | All Rights Reserved</div>
+    </section>
+</body>
+</html>
